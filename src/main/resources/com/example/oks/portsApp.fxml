@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="646.0" prefWidth="556.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oks.controllers.PortsAppController">
+   <children>
+      <Text layoutX="109.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input data" />
+      <Text layoutX="378.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output data" />
+      <Text layoutX="34.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose parity" wrappingWidth="77.84884643554688" />
+      <RadioButton fx:id="even" layoutX="34.0" layoutY="454.0" mnemonicParsing="false" onAction="#evenSelected" text="Even">
+         <toggleGroup>
+            <ToggleGroup fx:id="parity" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="odd" layoutX="99.0" layoutY="454.0" mnemonicParsing="false" onAction="#oddSelected" text="Odd" toggleGroup="$parity" />
+      <TextField fx:id="portsPair" editable="false" layoutX="34.0" layoutY="518.0" onMouseClicked="#pairOfPortsClick" prefHeight="26.0" prefWidth="150.0" />
+      <Text layoutX="34.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pair of ports" />
+      <TextField fx:id="countBytes" editable="false" layoutX="34.0" layoutY="575.0" onMouseClicked="#transferredBytesClicked" prefHeight="26.0" prefWidth="150.0" />
+      <Text layoutX="34.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfered bytes" wrappingWidth="95.4488525390625" />
+      <TextArea fx:id="inputField" layoutX="34.0" layoutY="65.0" onKeyPressed="#enterClicked" onMouseClicked="#mouseClicked" onMouseEntered="#mouseClicked" prefHeight="146.0" prefWidth="219.0" />
+      <TextArea fx:id="outputField" editable="false" layoutX="301.0" layoutY="65.0" prefHeight="146.0" prefWidth="219.0" />
+      <TextArea fx:id="staffingArea" editable="false" layoutX="367.0" layoutY="421.0" prefHeight="184.0" prefWidth="150.0" />
+      <Text layoutX="301.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Packages" />
+      <TextArea fx:id="inCollPack" layoutX="109.0" layoutY="241.0" prefHeight="163.0" prefWidth="150.0" />
+      <TextArea fx:id="outCollPack" layoutX="367.0" layoutY="241.0" prefHeight="163.0" prefWidth="150.0" />
+      <Text layoutX="39.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collisied input packages" wrappingWidth="54.52734375" />
+      <Text layoutX="298.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collisied output packages" wrappingWidth="54.52734375" />
+      <ToggleButton fx:id="collisionButton" layoutX="37.0" layoutY="372.0" mnemonicParsing="false" onAction="#CollisionButtonClicked" prefHeight="26.0" prefWidth="45.0" selected="true" text="ON" />
+      <Text layoutX="35.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collision" />
+   </children>
+</AnchorPane>
